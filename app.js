@@ -1,12 +1,16 @@
 function inAscOrder(arr) {
-    // Code your algorithm here :)
-    
-    // Hmmm ... maybe we should try our luck out ...
-    // if (Math.random() > 0.5) {
-    //  return true;
-    // } else {
-    //  return false;
-    // }
+    //create copy of arr without mutation
+    let myArr = arr.slice();
+    // sort arr into order
+    myArr.sort((a,b)=>a-b);
+    // make string then compare
+    let text1 = myArr.toString();
+    let text2 = arr.toString();
+    if(text1 == text2){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 console.log(inAscOrder([1, 2, 4, 7, 19])); // true
